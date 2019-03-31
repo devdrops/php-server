@@ -16,7 +16,7 @@ RUN apt-get update > /dev/null 2>&1 && \
     apt-get -y install \
         curl git zip unzip zlib1g-dev libzip-dev > /dev/null 2>&1 && \
     apt-get clean && \
-    docker-php-ext-install zip && \
+    docker-php-ext-install zip mysqli && \
     rm -rf /var/lib/apt/lists/* > /dev/null 2>&1
 
 EXPOSE 8080
